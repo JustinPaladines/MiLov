@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para ti</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    </head>
-    <body>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <main class="card">
-        <h1>¿Quieres ser mi San Valentín?</h1>
+<main class="escena">
+  <div class="contenido">
 
-        <div class="gallery">
-        <img src="img/lov-01.jpeg" alt="imagen uno">
-        <img src="img/lov-02.jpeg" alt="imagen dos">
+    <section class="texto-area">
+      <div class="texto-centro">
+        <p id="texto"></p>
+
+
+        <h1 id="pregunta" class="oculto">
+          ¿Quieres ser mi San Valentín?
+        </h1>
+
+        <div id="acciones" class="oculto">
+        <button onclick="mostrarModal()">Sí</button>
+        <button onclick="mostrarModal()">Sí también ❤️</button>
+
         </div>
+      </div>
+    </section>
 
-        <div class="actions">
-        <button onclick="aceptar()">Sí</button>
-        <button onclick="aceptar()">Sí también</button>
-        </div>
+    <section class="arbol-area">
+      <canvas id="canvas"></canvas>
+      <p id="contador" class="oculto"></p>
+    </section>
 
-        <section id="respuesta" class="hidden">
-        <h2>YUPIIII</h2>
-        <img src="img/yuupi.gif" alt="celebracion">
-</section>
+  </div>
+</main>
 
-    </main>
+<script src="script.js"></script>
+<!-- MODAL -->
+<div id="modal" class="modal oculto">
+    <div class="modal-contenido">
+    <h2>Sabía que dirías que sí, TE AMO</h2>
+    <p class="firma">J4u</p>
+    <img src="img/yuupi.gif" class="modal-img">
+    <button onclick="cerrarModal()">Cerrar</button>
+    </div>
 
-    <script src="script.js"></script>
-    </body>
-    </html>
+</div>
+
+</body>
+</html>

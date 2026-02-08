@@ -207,3 +207,82 @@ canvas {
     }
 }
 
+/* ===== RESPONSIVE MÓVIL ===== */
+@media (max-width: 768px) {
+
+    .contenido {
+        flex-direction: column;      /* 🔥 uno debajo del otro */
+        gap: 30px;
+        text-align: center;
+    }
+
+    /* TEXTO */
+    .texto-area,
+    .texto {
+        max-width: 100%;
+    }
+
+    #texto {
+        font-size: 1.05rem;
+        line-height: 1.9;
+    }
+
+    #pregunta {
+        font-size: 1.6rem;
+    }
+
+    /* BOTONES */
+    #acciones {
+        justify-content: center;
+    }
+
+    /* ÁRBOL */
+    .arbol-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    canvas {
+        width: 260px;      /* 🔥 más pequeño */
+        height: 380px;
+    }
+
+    /* CONTADOR */
+    #contador {
+        margin-top: 10px;
+        font-size: 0.85rem;
+    }
+
+    /* MODAL */
+    .modal-contenido {
+        max-width: 90%;
+        padding: 30px 25px;
+    }
+
+    .modal-contenido h2 {
+        font-size: 1.6rem;
+    }
+
+    .modal-img {
+        width: 110px;
+    }
+    }
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-contenido {
+    margin: 0 auto;
+  }
+}
